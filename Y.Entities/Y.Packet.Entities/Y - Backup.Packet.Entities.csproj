@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	  <AssemblyName>Y.Packet.Entities</AssemblyName>
+	  <RootNamespace>Y.Packet.Entities</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Y.Infrastructure.Library.Core">
+      <HintPath>..\..\infrastructure\Y.Infrastructure.Library.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="IDbCache\Vips\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Y.Infrastructure.Library.Core\Y.Infrastructure.Library.Core.csproj" />
+  </ItemGroup>
+
+</Project>

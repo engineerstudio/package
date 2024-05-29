@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="StackExchange.Redis.Extensions.Core" Version="7.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Y.Entities\Y.Packet.Entities\Y.Packet.Entities.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.ICache\Y.Infrastructure.ICache.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Y.Infrastructure.Library.Core">
+      <HintPath>..\..\infrastructure\Y.Infrastructure.Library.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyName>Y.Portal.Apis.Controllers</AssemblyName>
+		<RootNamespace>Y.Portal.Apis.Controllers</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<RuntimeHostConfigurationOption Include="System.Drawing.EnableUnixSupport" Value="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Application\Y.Infrastructure.Application.csproj" />
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Entities\Y.Infrastructure.Entities.csproj" />
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.IApplication\Y.Infrastructure.IApplication.csproj" />
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Library.Core\Y.Infrastructure.Library.Core.csproj" />
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Library\Y.Infrastructure.Library.csproj" />
+		<ProjectReference Include="..\..\Y.Repositories\Y.Packet.Repositories\Y.Packet.Repositories.csproj" />
+		<ProjectReference Include="..\..\Y.Services\Y.Packet.Services\Y.Packet.Services.csproj" />
+	</ItemGroup>
+
+</Project>

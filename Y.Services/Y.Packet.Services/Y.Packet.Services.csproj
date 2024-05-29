@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	  <AssemblyName>Y.Packet.Services</AssemblyName>
+	  <RootNamespace>Y.Packet.Services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Y.Entities\Y.Packet.Entities\Y.Packet.Entities.csproj" />
+    <ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Entities\Y.Infrastructure.Entities.csproj" />
+    <ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Library.Core\Y.Infrastructure.Library.Core.csproj" />
+    <ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Library\Y.Infrastructure.Library.csproj" />
+    <ProjectReference Include="..\..\Y.Repositories\Y.Packet.Repositories\Y.Packet.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Y.Services\Y.Packet.Services\Y.Packet.Services.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.Cache\Y.Infrastructure.Cache.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.IApplication\Y.Infrastructure.IApplication.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.ICache\Y.Infrastructure.ICache.csproj" />
+  </ItemGroup>
+
+</Project>

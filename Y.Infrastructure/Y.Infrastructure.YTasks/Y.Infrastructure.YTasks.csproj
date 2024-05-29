@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Jobs\GameOrdersWithParmsJob.cs" />
+    <Compile Remove="Jobs\HelloJob.cs" />
+    <Compile Remove="Jobs\HelloWithParmsJob.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+    <PackageReference Include="Quartz.AspNetCore" Version="3.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Y.Infrastructure.Application\Y.Infrastructure.Application.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.IApplication\Y.Infrastructure.IApplication.csproj" />
+  </ItemGroup>
+
+</Project>

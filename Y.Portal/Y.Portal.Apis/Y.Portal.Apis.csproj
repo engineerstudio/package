@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.25" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Y.Entities\Y.Packet.Entities\Y.Packet.Entities.csproj" />
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Application\Y.Infrastructure.Application.csproj" />
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Entities\Y.Infrastructure.Entities.csproj" />
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.IApplication\Y.Infrastructure.IApplication.csproj" />
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Library.Core\Y.Infrastructure.Library.Core.csproj" />
+		<ProjectReference Include="..\..\Y.Infrastructure\Y.Infrastructure.Library\Y.Infrastructure.Library.csproj" />
+		<ProjectReference Include="..\..\Y.Repositories\Y.Packet.Repositories\Y.Packet.Repositories.csproj" />
+		<ProjectReference Include="..\..\Y.Services\Y.Packet.Services\Y.Packet.Services.csproj" />
+		<ProjectReference Include="..\Y.Portal.Apis.Controllers\Y.Portal.Apis.Controllers.csproj" />
+	</ItemGroup>
+
+</Project>

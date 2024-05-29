@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\XNetCore.Infrastructure\XNetCore.Infrastructure.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.Application\Y.Infrastructure.Application.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.Cache\Y.Infrastructure.Cache.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.Entities\Y.Infrastructure.Entities.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.Games\Y.Infrastructure.Games.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.IApplication\Y.Infrastructure.IApplication.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.ICache\Y.Infrastructure.ICache.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.Library\Y.Infrastructure.Library.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.Pay\Y.Infrastructure.Pay.csproj" />
+    <ProjectReference Include="..\Y.Infrastructure.Withdrawal\Y.Infrastructure.Withdrawals.csproj" />
+  </ItemGroup>
+
+</Project>
