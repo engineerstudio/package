@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>角色管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <a class="layui-btn layui-btn-sm role-edit f9b20f9e04731e60">添加角色</a>
+        </div>
+        <div class="layui-card-body">
+            <table id="role-list" lay-filter="role-list"></table>
+        </div>
+    </div>
+    <!--审核状态-->
+    <script type="text/html" id="newsStatus">
+        {{#  if(d.newsStatus == "1"){ }}
+        <span class="layui-red">等待审核</span>
+        {{#  } else if(d.newsStatus == "0"){ }}
+        <span class="layui-blue">已存草稿</span>
+        {{#  } else { }}
+        审核通过
+        {{#  }}}
+    </script>
+
+
+    <!--账户类型-->
+    <script type="text/html" id="role-type">
+        {{#  if(d.RoleType == "0"){ }}
+        <span class="layui-red">超管</span>
+        {{#  } else if(d.RoleType == "1") { }}
+        <span class="layui-blue">普通管理</span>
+        {{#  }}}
+    </script>
+
+
+    <!--操作-->
+    <script type="text/html" id="role-listBar">
+        <a class="layui-btn layui-btn-xs a1084b565c20dcbd" lay-event="edit">编辑</a>
+    </script>
+
+
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/sysaccount/rolelist.js"></script>
+</body>
+</html>

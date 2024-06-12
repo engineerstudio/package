@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>页面配置管理--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <a class="layui-btn layui-btn-sm area-section-new-key">添加Key</a>
+            <a class="layui-btn layui-btn-sm area-section-new-keydetails">添加Key子菜单</a>
+        </div>
+        <div class="layui-card-body">
+            <table id="area-section-list" lay-filter="area-section-list"></table>
+        </div>
+    </div>
+    <!--游戏状态-->
+    <script type="text/html" id="area-gamestatus">
+        {{#  if(d.Enabled == "1"){ }}
+        <span class="layui-red">已开启</span>
+        {{#  } else if(d.Enabled == "0"){ }}
+        <span class="layui-blue">已关闭</span>
+        {{#  } else { }}
+        未知
+        {{# } }}
+    </script>
+
+    <!--操作-->
+    <script type="text/html" id="area-listBar">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <!--<a class="layui-btn layui-btn-xs layui-btn-primary" lay-event="area-orders">订单汇总</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="area-trans-orders">转账汇总</a>-->
+    </script>
+
+
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/area/sectionlist.js"></script>
+</body>
+</html>

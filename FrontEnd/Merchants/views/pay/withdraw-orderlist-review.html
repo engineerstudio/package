@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>确认支付订单内容</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div>
+        <div>
+            <button class="layui-btn layui-btn-sm withdraw-confirm-submit" lay-submit lay-filter="withdraw-confirm-submit" lay-data="">确认用户正常</button>
+        </div>
+        <hr class="layui-bg-red">
+    </div>
+
+    <div class="layui-tab" lay-filter="withdraw-orderlist-review-tabs">
+        <ul class="layui-tab-title">
+            <li class="layui-this" lay-id="withraw-info">提现信息</li>
+            <li lay-id="withraw-record">历史出款</li>
+            <li lay-id="withraw-betamount">打码信息</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+
+                <fieldset class="layui-elem-field">
+                    <legend class="fieldset-lengd-title">订单信息</legend>
+                    <div class="layui-field-box">
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="180">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>会员名称 / 标识</td>
+                                    <td><span class="memberName"></span> / <span class="memberId"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>提现账户名 / 银行卡号</td>
+                                    <td><span class="accountName"></span> / <span class="accountNo"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>提现金额</td>
+                                    <td><span class="reqMoney"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </fieldset>
+                <fieldset class="layui-elem-field">
+                    <legend class="fieldset-lengd-title">出款核对</legend>
+                    <div class="layui-field-box">
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="180">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>提现卡号是否相同</td>
+                                    <td><span class="sameBankCard"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>总充值 / 已提现 / 游戏账户金额 / 是否盈利账户</td>
+                                    <td><span class="totalRecharge"></span> / <span class="totalWithdrawals"></span> / <span class="gameMoney"></span> / <span class="isMemberProfit"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>是否打满流水</td>
+                                    <td><span class="fullBetAmount"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </fieldset>
+                <!--<hr class="layui-bg-red">
+                <div>
+                    <button class="layui-btn layui-btn-sm withdraw-confirm-submit" lay-submit lay-filter="withdraw-confirm-submit" lay-data="">确认用户正常</button>
+                    <button class="layui-btn layui-btn-sm withdraw-cannel-submit" lay-submit lay-filter="withdraw-cannel-submit">取消出款</button>
+                </div>-->
+
+            </div>
+            <div class="layui-tab-item">
+                <table id="withdraw-orderlist-history-table" lay-filter="withdraw-orderlist-history-table"></table>
+            </div>
+            <div class="layui-tab-item">打码信息</div>
+        </div>
+    </div>
+
+    <style>
+        .fieldset-lengd-title { color: mediumvioletred; font-size: 13px; font-family: Arial }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/pay/withdraw-orderlist-review.js"></script>
+</body>
+</html>

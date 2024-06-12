@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>文章列表--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <a class="layui-btn layui-btn-sm member-addnew a41ce472055ed63a">添加会员</a>
+        </div>
+        <div class="layui-card-body">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" name="Id" placeholder="请输入搜索的会员ID" />
+                    </div>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" name="AccountName" placeholder="请输入搜索的会员名字" />
+                    </div>
+                    <div class="layui-input-inline">
+                        <!--会员分组-->
+                        <select name="GroupId">
+                        </select>
+                    </div>
+                    <div class="layui-input-inline">
+                        <!--会员类别-->
+                        <select name="MemberType">
+                        </select>
+                    </div>
+                    <a class="layui-btn layui-btn-sm search_btn" lay-submit lay-filter="memberlist-search-submit" data-type="reload">搜索</a>
+                </div>
+            </form>
+            <table id="member-list" lay-filter="member-list"></table>
+        </div>
+    </div>
+    <!--审核状态-->
+    <script type="text/html" id="newsStatus">
+        {{#  if(d.newsStatus == "1"){ }}
+        <span class="layui-red">等待审核</span>
+        {{#  } else if(d.newsStatus == "0"){ }}
+        <span class="layui-blue">已存草稿</span>
+        {{#  } else { }}
+        审核通过
+        {{#  }}}
+    </script>
+
+
+    <!--账户类型-->
+    <script type="text/html" id="member-type">
+        {{#  if(d.Type == "2"){ }}
+        <span class="layui-red">代理</span>
+        {{#  } else if(d.Type == "1") { }}
+        <span class="layui-blue">会员</span>
+        {{#  }}}
+    </script>
+
+
+    <!--操作-->
+    <script type="text/html" id="member-listBar">
+        <a class="layui-btn layui-btn-xs a35ca39fd8e1068b" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger c37c4fe299a1fcc4" lay-event="agent">代理配置</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger abd8b4c126ecdbf5" lay-event="credit">账变日志</a>
+        <a class="layui-btn layui-btn-xs layui-btn-primary a51ba100c1cfa329" lay-event="loginlog">登陆日志</a>
+    </script>
+
+
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/members/memberlist.js"></script>
+</body>
+</html>

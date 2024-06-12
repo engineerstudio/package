@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>支付列表页面</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <a class="layui-btn layui-btn-sm pay-merchant-manager a2843e8bedef69">添加支付渠道</a>
+            <a class="layui-btn layui-btn-sm pay-type-manager a42276f025046a53">支付类型管理</a>
+        </div>
+        <div class="layui-card-body">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" name="Name" placeholder="请输入搜索的渠道名字" />
+                    </div>
+                    <a class="layui-btn layui-btn-sm search_btn" lay-submit lay-filter="pay-list-search-submit" data-type="reload">搜索</a>
+                </div>
+                <div class="layui-inline">
+                    <!--<a class="layui-btn layui-btn-normal pay-btn-create"><i class="layui-icon">&#xe61f;</i>创建活动</a>-->
+                </div>
+            </form>
+            <table id="pay-list-table" lay-filter="pay-list-table"></table>
+        </div>
+    </div>
+
+    <script type="text/html" id="pay-list-table-status">
+        {{# if(d.Enabled){ }}
+        <a class="layui-btn layui-btn-xs">已开启</a>
+        {{# }else{ }}
+        <a class="layui-btn layui-btn-xs">已关闭</a>
+        {{# } }}
+    </script>
+
+
+
+    <!--操作-->
+    <script type="text/html" id="pay-list-table-bar">
+        <a class="layui-btn layui-btn-xs a38272817684aa57" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-xs f81529eea56e6c81" lay-event="orders">订单汇总</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+    </script>
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/pay/paylist.js"></script>
+</body>
+</html>

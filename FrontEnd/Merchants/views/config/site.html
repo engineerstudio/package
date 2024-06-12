@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>站点配置页面</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+    <style>
+        #config-site-table td:first-child {
+            width: 130px;
+            text-align: right;
+        }
+
+        #config-site-table tr {
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            站点配置页面
+        </div>
+        <div class="layui-card-body">
+
+            <form class="layui-form layui-row layui-col-space10" id="config-site-table-form" lay-filter="config-site-table-form">
+                <table id="config-site-table" lay-filter="cconfig-site-table">
+                    <tbody>
+                        <tr>
+                            <td>站点名称：</td>
+                            <td id="SiteName"> </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Web站点Logo：</td>
+                            <td>
+                                <img name="WebLogo" src="" style="width: 43px; height:43px;" class="layui-upload-img layui-circle  userAvatar" />
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm upload-btn" id="ImgUrl-btn"><i class="layui-icon">&#xe67c;</i></button>
+                            </td>
+                            <td>Web站点显示的Logo</td>
+                        </tr>
+                        <tr>
+                            <td>  Mobile站点Logo：</td>
+                            <td>
+                                <img name="MobileLogo" src="" style="width: 43px; height:43px;" class="layui-upload-img layui-circle  userAvatar" />
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm upload-btn" id="ImgUrl-btn"><i class="layui-icon">&#xe67c;</i></button>
+                            </td>
+                            <td>手机站点/APP站点显示的Logo </td>
+                        </tr>
+                        <tr>
+                            <td>  APP下载二维码：</td>
+                            <td>
+                                <img name="QRCode" src="" style="width: 43px; height:43px;" class="layui-upload-img layui-circle  userAvatar" />
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm upload-btn" id="ImgUrl-btn"><i class="layui-icon">&#xe67c;</i></button>
+                            </td>
+                            <td>下载手机APP时扫描的二位码 </td>
+                        </tr>
+                        <tr>
+                            <td>  客服链接：</td>
+                            <td> <input type="text" name="ServiceLink" class="layui-input" /> </td>
+                            <td>  </td>
+                        </tr>
+                        <tr>
+                            <td> 允许H5访问：</td>
+                            <td>  <input type="checkbox" name="EnabledH5" title="" checked> </td>
+                            <td>开启状态则允许移动端通过手机浏览器访问站点，未开启状态在移动端提示用户下载手机APP页面 </td>
+                        </tr>
+                        <tr>
+                            <td> 代理模式：</td>
+                            <td>  <input type="checkbox" name="EnabledAgentModel" title=""></td>
+                            <td> 开启状态站点仅代理邀请才能注册，普通用户无法注册站点 </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="layui-input-inline">
+                    <button class="layui-btn layui-btn-sm f218f0d3ebae631a" lay-submit lay-filter="config-site-table-form-submit">保存提交</button> 
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!--style="background-color: #009688;color:white"-->
+
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/config/site.js"></script>
+</body>
+</html>

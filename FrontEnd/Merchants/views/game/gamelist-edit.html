@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>游戏编辑</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+    <form class="layui-form layui-row layui-col-space10">
+
+        <div class="layui-col-md9 layui-col-xs12">
+            <div class="layui-form-item">
+                <label class="layui-form-label">游戏名称</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" name="Name">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">是否开启</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="Enabled" title="开启">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">交收费率</label>
+                <div class="layui-input-block">
+                    <input type="text" name="fee" class="layui-input" style="width:30px;" disabled>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-btn-sm ab4984ad09b4abd6" lay-submit lay-filter="gamelist-edit-submit">立即提交</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/game/gamelist-edit.js"></script>
+</body>
+</html>

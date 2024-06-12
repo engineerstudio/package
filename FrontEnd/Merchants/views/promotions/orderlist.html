@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>活动订单列表页面</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <a class="layui-btn layui-btn-sm promotions-orders-create df09d7cf1d0f42a0">创建返水活动订单</a>
+        </div>
+        <div class="layui-card-body">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="number" class="layui-input searchVal" name="PromotionId" placeholder="请输入搜索的活动ID" />
+                    </div>
+                    <div class="layui-input-inline">
+                        <input type="number" class="layui-input searchVal" name="MemberId" placeholder="请输入搜索的会员ID" />
+                    </div>
+                    <div class="layui-input-inline">
+                        <!--订单活动类别 AType-->
+                        <select name="AType">
+                        </select>
+                    </div>
+                    <div class="layui-input-inline">
+                        <!--订单活动状态 Status-->
+                        <select name="Status">
+                        </select>
+                    </div>
+                    <a class="layui-btn search_btn" lay-submit lay-filter="promotions-orders-list-search" data-type="reload">搜索</a>
+                </div>
+                <!--<div class="layui-inline">
+                    <a class="layui-btn layui-btn-normal promotions-btn-create"><i class="layui-icon">&#xe61f;</i>创建活动</a>
+                </div>-->
+            </form>
+            <table id="promotions-orders-list-table" id="promotions-orders-list-table" lay-filter="promotions-orders-list-table"></table>
+        </div>
+    </div>
+
+    <!--操作-->
+    <script type="text/html" id="promotions-orders-list-table-bar">
+        <a class="layui-btn layui-btn-xs f19aace677c8b482" lay-event="reward">确认订单</a>
+        {{# if(d.TypeStr=='Rebate'){ }}
+        <a class="layui-btn layui-btn-xs b15717bddf5df4c6" lay-event="rebateorderdetails">返水明细</a>
+        {{# } }}
+        <!--<a class="layui-btn layui-btn-xs" lay-event="orders">订单汇总</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>-->
+    </script>
+
+
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/promotions/orderlist.js"></script>
+</body>
+</html>

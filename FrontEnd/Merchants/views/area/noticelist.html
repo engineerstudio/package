@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>通知公告列表页面</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <a class="layui-btn layui-btn-sm notice-content aaaf7bc0d32eb910">添加内容</a>
+        </div>
+        <div class="layui-card-body">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" name="Name" placeholder="请输入搜索的标题名称" />
+                    </div>
+                    <a class="layui-btn layui-btn-sm search_btn" lay-submit lay-filter="area-noticelist-search-submit" data-type="reload">搜索</a>
+                </div>
+                <div class="layui-inline">
+                </div>
+            </form>
+            <table id="area-noticelist-table" lay-filter="area-noticelist-table"></table>
+        </div>
+    </div>
+
+    <script type="text/html" id="area-noticelist-table-status">
+        {{# if(d.Enabled){ }}
+        <a class="layui-btn layui-btn-xs">已开启</a>
+        {{# }else{ }}
+        <a class="layui-btn layui-btn-xs">已关闭</a>
+        {{# } }}
+    </script>
+
+
+
+    <!--操作-->
+    <script type="text/html" id="area-noticelist-table-bar">
+        <a class="layui-btn layui-btn-xs cd22ecb8c073278f" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+    </script>
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/area/noticelist.js"></script>
+</body>
+</html>

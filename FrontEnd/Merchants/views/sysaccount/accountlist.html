@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>账户管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <a class="layui-btn layui-btn-sm account-edit">添加账户</a>
+        </div>
+        <div class="layui-card-body">
+            <table id="account-list" lay-filter="account-list"></table>
+        </div>
+    </div>
+    <!--审核状态-->
+    <script type="text/html" id="newsStatus">
+        {{#  if(d.newsStatus == "1"){ }}
+        <span class="layui-red">等待审核</span>
+        {{#  } else if(d.newsStatus == "0"){ }}
+        <span class="layui-blue">已存草稿</span>
+        {{#  } else { }}
+        审核通过
+        {{#  }}}
+    </script>
+
+
+    <!--账户类型-->
+    <script type="text/html" id="account-manager-roleName">
+        {{#  if(d.UserName=='sysAdmin'){ }}
+        <span class="layui-red">超管</span>
+        {{#  } else { }}
+        <span class="layui-blue">{{d.RoleName}}</span>
+        {{#  }}}
+    </script>
+
+
+    <!--操作-->
+    <script type="text/html" id="account-listBar">
+        {{# if(d.UserName!='sysAdmin'){ }}
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        {{# } }}
+    </script>
+
+
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/sysaccount/accountlist.js"></script>
+</body>
+</html>

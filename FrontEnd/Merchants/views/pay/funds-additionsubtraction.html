@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设定支付类型</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+    <form class="layui-form layui-row layui-col-space10">
+
+        <div class="layui-col-md9 layui-col-xs12">
+            <div class="layui-form-item">
+                <label class="layui-form-label">款项类型</label>
+                <div class="layui-input-block">
+                    <select name="FundsType" lay-filter="FundsType">
+                        <!--<option value="0">请选类型</option>-->
+                        <option value="Recharge">充值</option>
+                        <option value="WithDraw">提款</option>
+                        <option value="Promotions">活动</option>
+                        <option value="Games">游戏</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">款项子类型</label>
+                <div class="layui-input-block">
+                    <select name="FundsSubType" lay-filter="FundsSubType">
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">会员名称</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" name="Name" placeholder="请输入会员名称">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">金额</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" name="Money" placeholder="请输入金额">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">备注</label>
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input" name="Marks" placeholder="请输入备注">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-btn-sm d9559edc0a858cdc a50586451a2d7f09" lay-submit lay-filter="funds-manager-submit">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-sm layui-btn-primary">重置</button>
+
+                    <input type="hidden" name="FundsTransType" />
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/pay/funds-additionsubtraction.js"></script>
+</body>
+</html>

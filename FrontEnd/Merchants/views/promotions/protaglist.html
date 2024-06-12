@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>活动列表页面</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" name="Name" placeholder="请输入活动标签" />
+                    </div>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" name="Sort" placeholder="请输入序号" />
+                    </div>
+                    <a class="layui-btn layui-btn-sm search_btn" lay-submit lay-filter="protag-list-submit">保存</a>
+                    <input type="hidden" value="0" name="Id" />
+                </div>
+            </form>
+        </div>
+        <div class="layui-card-body">
+            <table id="protag-list-table" lay-filter="protag-list-table"></table>
+        </div>
+    </div>
+
+    <!--操作-->
+    <script type="text/html" id="protag-list-table-bar">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+    </script>
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/promotions/protaglist.js"></script>
+</body>
+</html>

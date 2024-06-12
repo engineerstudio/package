@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <script src="https://cdn.wwzznn.com/kindeditor/kindeditor-all-min.js"></script>
+</head>
+<body class="childrenBody">
+    <form class="layui-form layui-row layui-col-space10" id="pro-createpage-form">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">活动类型</label>
+                <div class="layui-input-block">
+                    <select name="AType" lay-filter="AType">
+                        <option value="0">请选活动类型</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">活动标签</label>
+                <div class="layui-input-block">
+                    <select name="Tag" lay-filter="Tag">
+                        <option value="0">请选活动标签</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">活动名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="Title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">活动开启</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="Enabled" lay-skin="switch" lay-text="开启|关闭">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">前台显示</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="Visible" lay-skin="switch" lay-text="开启|关闭">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">活动时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="StartTime" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid">-</div>
+                <div class="layui-input-inline">
+                    <input type="text" name="EndTime" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">奖金派发</label>
+                <div class="layui-input-block">
+                    <select name="BonusType" lay-filter="BonusType">
+                        <!--<option value="0">请选择奖金派发类型</option>-->
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">奖金计算</label>
+                <div class="layui-input-inline">
+                    <select name="BonusCalType" lay-filter="BonusCalType">
+                        <!--<option value="0">请选择奖金计算方式</option>-->
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux" style="width: 85px; padding: 0 !important;"> <input type="number" name="BonusCalTypeValue" autocomplete="off" class="layui-input" placeholder="金额/百分比"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">奖金打码量</label>
+                <div class="layui-input-inline">
+                    <select name="WashType" lay-filter="WashType">
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux" style="width: 85px; padding: 0 !important;"> <input type="number" name="WashValue" autocomplete="off" class="layui-input" placeholder="金额/倍数"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">IP核查</label>
+                <div class="layui-input-block">
+                    <select name="IPCheckType" lay-filter="IPCheckType">
+                        <!--<option value="0">请选IP检测方式</option>-->
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">封面图</label>
+                <div class="layui-input-block">
+                    <img name="ImgUrl" src="" style="width: 43px; height: 43px; " class="layui-upload-img layui-circle upload-btn " id="ImgUrl" />
+                    <button type="button" class="layui-btn layui-btn-sm ImgUrl-btn" id="ImgUrl-btn" name="Cover">上传</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">H5封面图</label>
+                <div class="layui-input-block">
+                    <img name="H5ImgUrl" src="" style="width: 43px; height: 43px; " class="layui-upload-img layui-circle upload-btn " id="H5ImgUrl" />
+                    <button type="button" class="layui-btn layui-btn-sm ImgUrl-btn" id="H5ImgUrl-btn" name="Cover">上传</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">内容</label>
+                <div class="layui-input-block">
+                    <textarea id="editor" name="Content"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <input type="hidden" id="Id" name="Id" value="0" />
+                <button class="layui-btn layui-btn-sm fbf6ab2072822790" lay-submit lay-filter="pro-createpage-submit">保存提交</button>
+                <button type="reset" class="layui-btn layui-btn-sm layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/promotions/pro-createpage.js"></script>
+</body>
+</html>

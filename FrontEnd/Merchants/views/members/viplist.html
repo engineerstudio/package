@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>返水管理--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <a class="layui-btn layui-btn-sm member-viplist-new b474006639fb81b2">新增分组</a>
+            <a class="layui-btn layui-btn-sm member-viplist-rule-set">分组升级规则设定</a>
+        </div>
+        <div class="layui-card-body">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" name="GroupName" placeholder="请输入搜索的分组名称" />
+                    </div>
+                    <a class="layui-btn layui-btn-sm search_btn" lay-submit lay-filter="member-viplist-search-submit" data-type="reload">搜索</a>
+                </div>
+            </form>
+            <table id="member-viplist-list" lay-filter="member-viplist-list"></table>
+        </div>
+    </div>
+
+    <!--是否开启-->
+    <script type="text/html" id="viplist-enabled-status">
+        {{#  if(d.Enabled == "1"){ }}
+        <span class="layui-red">已开启</span>
+        {{#  } else if(d.Enabled == "0"){ }}
+        <span class="layui-blue">已关闭</span>
+        {{#  } else { }}
+        错误
+        {{# } }}
+    </script>
+    <!--是否默认分组-->
+    <script type="text/html" id="viplist-isdefault-status">
+        {{#  if(d.IsDefault == "1"){ }}
+        <span class="layui-red">是</span>
+        {{#  } else if(d.IsDefault == "0"){ }}
+        <span class="layui-blue">否</span>
+        {{#  } else { }}
+        错误
+        {{# } }}
+    </script>
+
+    <!--审核状态-->
+    <script type="text/html" id="newsStatus">
+        {{#  if(d.newsStatus == "1"){ }}
+        <span class="layui-red">等待审核</span>
+        {{#  } else if(d.newsStatus == "0"){ }}
+        <span class="layui-blue">已存草稿</span>
+        {{#  } else { }}
+        审核通过
+        {{# } }}
+    </script>
+
+    <!--操作-->
+    <script type="text/html" id="viplist-listBar">
+        <a class="layui-btn layui-btn-xs af829007a99bf40a" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-primary a1db673a93a64c88" lay-event="group-rule">分组设定</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger d1f43defc52b0a64" lay-event="pay-rule">配置支付</a>
+        <a class="layui-btn layui-btn-xs layui-btn-primary a0b2741e4aaf9acf" lay-event="promo-rule">优惠设定</a>
+    </script>
+
+
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/members/viplist.js"></script>
+</body>
+</html>

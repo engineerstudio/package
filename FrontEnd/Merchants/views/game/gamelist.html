@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>游戏管理--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/public.css" media="all" />
+    <link rel="stylesheet" href="https://cdn.wwzznn.com/layuicms/css/content.css" media="all" />
+</head>
+<body class="childrenBody">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <form class="layui-form">
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input searchVal" name="GameName" placeholder="请输入搜索的游戏名称" />
+                    </div>
+                    <a class="layui-btn layui-btn-sm search_btn" lay-submit lay-filter="game-gamelist-search-form" data-type="reload">搜索</a>
+                </div>
+            </form>
+            <table id="game-gamelist-list" lay-filter="game-gamelist-list"></table>
+        </div>
+    </div>
+    <!--游戏状态-->
+    <script type="text/html" id="gamelist-gamestatus">
+        {{#  if(d.Enabled == "1"){ }}
+        <span class="layui-red">已开启</span>
+        {{#  } else if(d.Enabled == "0"){ }}
+        <span class="layui-blue">已关闭</span>
+        {{#  } else { }}
+        未知
+        {{# } }}
+    </script>
+
+    <!--操作-->
+    <script type="text/html" id="gamelist-listBar">
+        <a class="layui-btn layui-btn-xs a05fcaf378ce26c1" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-primary a69c8bfec0e48c5" lay-event="gamelist-orders">订单汇总</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger a501463ba08c34da" lay-event="gamelist-trans-orders">转账汇总</a>
+    </script>
+
+
+
+    <script type="text/javascript" src="https://cdn.wwzznn.com/layui/layui.js"></script>
+    <script type="text/javascript" src="/js/game/gamelist.js"></script>
+</body>
+</html>
